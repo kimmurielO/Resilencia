@@ -2,7 +2,7 @@ package com.nttdata.pruebaResilencia;
 
 public class PRetry {
 	
-	public static void pRetry(int error) {
+	public void pRetry(int error) {
 		
 		int umbral = 9;
 		
