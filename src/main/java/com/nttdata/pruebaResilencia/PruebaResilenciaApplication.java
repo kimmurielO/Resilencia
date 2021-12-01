@@ -11,15 +11,15 @@ public class PruebaResilenciaApplication {
 	}
 	
 	public void run() throws InterruptedException{
-		for(int i=0;i<10;i++) {
+		for(int i=1;i<10;i++) {
 			circuitBreaker circuitBreaker = new circuitBreaker();
-			// Entro en el close porque
-			circuitBreaker.close();
+			// Entro en el close porque tengo error
+			circuitBreaker.close(i);
 		}
 		
 		for(int i=0;i<10;i++) {
 			PRetry PRetry = new PRetry();
-			//PRetry.close();
+			PRetry.pRetry(i);
 		}
 	}
 
